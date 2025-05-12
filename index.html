@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WBIZNEX - World Business Nexus | Global Business Networking</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1103A6',
+                        secondary: '#00A0E3',
+                        light: '#F4F4FA',
+                        dark: '#212529'
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+
+    <!------------------------------------- S T Y L E  ------------------------------------->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap');
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #1103A6 0%, #00A0E3 100%);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #00A0E3;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .active::after {
+            width: 100%;
+        }
+
+        .event-card:hover .event-overlay {
+            opacity: 1;
+        }
+
+        .tab-active {
+            color: #1103A6;
+            border-bottom: 2px solid #1103A6;
+        }
+
+        .logo-text {
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .logo-shine {
+            animation: shine 3s infinite;
+            background: linear-gradient(to right, #1103A6 0%, #00A0E3 50%, #1103A6 100%);
+            background-size: 200% auto;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @keyframes shine {
+            to {
+                background-position: 200% center;
+            }
+        }
+
+        .stock-image {
+            background-color: #e5e7eb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6b7280;
+            font-size: 0.875rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stock-image::after {
+            content: "Replace with Canva stock photo";
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 4px;
+            font-size: 12px;
+        }
+
+        .event-image {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .footer-link:hover {
+            color: #00A0E3;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-3px);
+            color: #00A0E3;
+        }
+    </style>
+</head>
+
+<body class="font-sans text-dark">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="#" class="flex items-center">
+                        <!-- Replace with your logo from Canva's brand kit -->
+                        <div class="logo-placeholder mr-2">
+                            <!-- This is a placeholder for your actual logo -->
+                            <img src="./assets/wbiznex_logo.png" width="40" height="40" alt="wbiznex logo">
+                        </div>
+                        <div>
+                            <span class="text-primary font-bold text-2xl logo-text">WBIZ<span
+                                    class="logo-shine">NEX</span></span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="nav-link active font-medium">Home</a>
+                    <a href="#features" class="nav-link font-medium">Features</a>
+                    <a href="#memberships" class="nav-link font-medium">Memberships</a>
+                    <a href="#events" class="nav-link font-medium">Events</a>
+                    <a href="#blog" class="nav-link font-medium">Blog</a>
+                    <a href="#contact" class="nav-link font-medium">Contact</a>
+                    <a href="https://app.wbiznex.com/"
+                        class="bg-secondary text-white px-6 py-2 rounded-full hover:bg-opacity-90 transition duration-300">Login</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden pt-4 pb-2">
+                <a href="#home" class="block py-2 px-4 text-sm hover:bg-gray-100 rounded">Home</a>
+                <a href="#features" class="block py-2 px-4 text-sm hover:bg-gray-100 rounded">Features</a>
+                <a href="#memberships" class="block py-2 px-4 text-sm hover:bg-gray-100 rounded">Memberships</a>
+                <a href="#events" class="block py-2 px-4 text-sm hover:bg-gray-100 rounded">Events</a>
+                <a href="#blog" class="block py-2 px-4 text-sm hover:bg-gray-100 rounded">Blog</a>
+                <a href="#contact" class="block py-2 px-4 text-sm hover:bg-gray-100 rounded">Contact</a>
+                <a href="https://app.wbiznex.com/" class="block py-2 px-4 text-sm bg-secondary text-white rounded mt-2">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white pt-28 pb-20">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <div class="flex items-center mb-6">
+                        <!-- Replace with your logo from Canva's brand kit -->
+                        <div class="logo-placeholder mr-3">
+                            <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Define clipPath for circle -->
+                                <defs>
+                                    <clipPath id="circleClip">
+                                        <circle cx="30" cy="30" r="28" />
+                                    </clipPath>
+                                </defs>
+                                <!-- Background circle -->
+                                <circle cx="30" cy="30" r="28" fill="#F4F4FA" />
+                                <!-- Image clipped to the circle -->
+                                <image href="./assets/wbiznex_logo.png" x="2" y="2" width="56" height="56"
+                                    clip-path="url(#circleClip)" />
+                            </svg>
+                        </div>
+                        <h1 class="text-4xl md:text-5xl font-bold">WBIZNEX</h1>
+                    </div>
+                    <p class="text-2xl mb-4">World Business Nexus</p>
+                    <p class="text-lg mb-8">WBIZNEX is a hybrid business networking platform combining the best of
+                        online connections and in-person events worldwide.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#memberships"
+                            class="bg-secondary text-white px-8 py-3 rounded-full text-center hover:bg-opacity-90 transition duration-300">Join
+                            WBIZNEX</a>
+                        <a href="#features"
+                            class="bg-white text-primary px-8 py-3 rounded-full text-center hover:bg-opacity-90 transition duration-300">Learn
+                            More</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <!-- STOCK PHOTO 1: Hero Image -->
+                    <div class=" rounded-lg overflow-hidden h-100 w-full">
+                        <div class="flex flex-col items-center justify-center h-full">
+                            <img src="assets/Hero1.jpg" alt="World Business Nexus">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">About <span class="text-primary">WBIZNEX</span></h2>
+                <div class="w-20 h-1 bg-secondary mx-auto mb-6"></div>
+                <p class="max-w-3xl mx-auto text-lg">World Business Nexus (WBIZNEX) is an international business
+                    networking wing of World Trade Parliament, designed to connect entrepreneurs and businesses globally
+                    through a unique hybrid networking approach.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                <div class="bg-white p-8 rounded-lg shadow-md card-hover transition duration-300">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Global Reach</h3>
+                    <p>Connect with business professionals from around the world through our extensive international
+                        network.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-md card-hover transition duration-300">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Hybrid Networking</h3>
+                    <p>Experience the perfect blend of online connections (40%) and in-person events (60%) for maximum
+                        business growth.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-md card-hover transition duration-300">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Trusted Community</h3>
+                    <p>Join a vetted community of serious business professionals committed to ethical business
+                        practices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Our <span class="text-primary">Features</span></h2>
+                <div class="w-20 h-1 bg-secondary mx-auto mb-6"></div>
+                <p class="max-w-3xl mx-auto">Discover how WBIZNEX helps you grow your business network through our
+                    innovative platform and events.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
+                <div class="flex">
+                    <div class="mr-6">
+                        <div class="bg-primary text-white rounded-full p-3 w-12 h-12 flex items-center justify-center">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-3">Exclusive Mobile App</h3>
+                        <p class="text-gray-600">Our members-only WBIZNEX app allows you to discover business
+                            professionals worldwide, view their profiles, and connect with potential partners.</p>
+                    </div>
+                </div>
+
+                <div class="flex">
+                    <div class="mr-6">
+                        <div class="bg-primary text-white rounded-full p-3 w-12 h-12 flex items-center justify-center">
+                            <i class="fas fa-user-friends"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-3">Build Your Network</h3>
+                        <p class="text-gray-600">Send connection requests, build your network, and showcase your
+                            business, products, and services through your professional profile.</p>
+                    </div>
+                </div>
+
+                <div class="flex">
+                    <div class="mr-6">
+                        <div class="bg-primary text-white rounded-full p-3 w-12 h-12 flex items-center justify-center">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-3">Industry Forums</h3>
+                        <p class="text-gray-600">Participate in industry-specific forums to connect with peers in your
+                            field, share insights, and build your brand through meaningful contributions.</p>
+                    </div>
+                </div>
+
+                <div class="flex">
+                    <div class="mr-6">
+                        <div class="bg-primary text-white rounded-full p-3 w-12 h-12 flex items-center justify-center">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-3">Global Events</h3>
+                        <p class="text-gray-600">Book and attend periodic networking events around the globe where you
+                            can meet your online connections in person to build trust and explore business
+                            opportunities.</p>
+                    </div>
+                </div>
+
+                <div class="flex">
+                    <div class="mr-6">
+                        <div class="bg-primary text-white rounded-full p-3 w-12 h-12 flex items-center justify-center">
+                            <i class="fas fa-store"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-3">Product Showcase</h3>
+                        <p class="text-gray-600">List and showcase your products and services in the app's dedicated
+                            display section, increasing visibility to potential clients and partners.</p>
+                    </div>
+                </div>
+
+                <div class="flex">
+                    <div class="mr-6">
+                        <div class="bg-primary text-white rounded-full p-3 w-12 h-12 flex items-center justify-center">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-3">Round Table Networking</h3>
+                        <p class="text-gray-600">Experience our unique round table networking format at events, designed
+                            to ensure you meet and discuss with every attendee to maximize connections.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Showcase -->
+    <section class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-8">
+                    <h2 class="text-3xl font-bold mb-4">Connect With <span class="text-primary">Global Business
+                            Leaders</span></h2>
+                    <div class="w-20 h-1 bg-secondary mb-6"></div>
+                    <p class="mb-6">Our platform connects you with verified business professionals from around the
+                        world, allowing you to expand your network beyond geographical boundaries.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-secondary mr-2 mt-1 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Access to verified business profiles from 50+ countries</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-secondary mr-2 mt-1 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Advanced search filters to find the right connections</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-secondary mr-2 mt-1 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Direct messaging with translation support</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2">
+                    <!-- STOCK PHOTO 2: App Interface -->
+                    <div class=" rounded-lg overflow-hidden shadow-xl h-120">
+                        <div class="flex flex-col items-center justify-center h-full">
+                           <img src="./assets/wbiznex2.jpg" alt="Connect with business leaders">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Memberships Section -->
+    <section id="memberships" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Membership <span class="text-primary">Plans</span></h2>
+                <div class="w-20 h-1 bg-secondary mx-auto mb-6"></div>
+                <p class="max-w-3xl mx-auto">Choose the membership tier that best suits your business networking needs.
+                </p>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-8 mt-12 max-w-5xl mx-auto">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden flex-1 card-hover transition duration-300">
+                    <div class="bg-primary text-white p-6 text-center">
+                        <h3 class="text-2xl font-bold">National Membership</h3>
+                        <p class="mt-2 opacity-90">For domestic networking</p>
+                    </div>
+                    <div class="p-8">
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-secondary mr-2 mt-1 flex-shrink-0" fill="currentColor"
+                                    viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Exclusive product/service display in WBIZNEX app</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-secondary mr-2 mt-1 flex-shrink-0" fill="currentColor"
+                                    viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Unlimited networking connections within your country</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-secondary mr-2 mt-1 flex-shrink-0" fill="currentColor"
+                                    viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Access to monthly national-level meetings</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-secondary mr-2 mt-1 flex-shrink-0" fill="currentColor"
+                                    viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Full-day round table networking at national events</span>
+                            </li>
+                        </ul>
+                        <div class="mt-8 text-center">
+                            <a href="https://app.wbiznex.com/"
+                                class="bg-primary text-white px-8 py-3 rounded-full inline-block hover:bg-opacity-90 transition duration-300">Subscribe
+                                Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white rounded-xl shadow-lg overflow-hidden flex-1 card-hover transition duration-300 border-2 border-secondary relative">
+                    <div class="absolute top-0 right-0 bg-secondary text-white px-4 py-1 text-sm font-bold">
+                        RECOMMENDED
+                    </div>
+                    <div class="bg-primary text-white p-6 text-center">
+                        <h3 class="text-2xl font-bold">International Membership</h3>
+                        <p class="mt-2 opacity-90">For global networking</p>
+                    </div>
+                    <div class="p-8">
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-secondary mr-2 mt-1 flex-shrink-0" fill="currentColor"
+                                    viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                <span><strong>All National Membership benefits</strong></span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-secondary mr-2 mt-1 flex-shrink-0" fill="currentColor"
+                                    viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Monthly regional meetings outside your country</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-secondary mr-2 mt-1 flex-shrink-0" fill="currentColor"
+                                    viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Quarterly international business networking events</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-secondary mr-2 mt-1 flex-shrink-0" fill="currentColor"
+                                    viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Worldwide product promotion</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-secondary mr-2 mt-1 flex-shrink-0" fill="currentColor"
+                                    viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Semi-annual investor meets with pitch opportunities</span>
+                            </li>
+                        </ul>
+                        <div class="mt-8 text-center">
+                            <a href="https://app.wbiznex.com/"
+                                class="bg-secondary text-white px-8 py-3 rounded-full inline-block hover:bg-opacity-90 transition duration-300">Subscribe
+                                Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Upcoming <span class="text-primary">Events</span></h2>
+                <div class="w-20 h-1 bg-secondary mx-auto mb-6"></div>
+                <p class="max-w-3xl mx-auto">Join our global networking events to connect with business professionals in
+                    person.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover transition duration-300">
+                    <div class="relative event-card">
+                        <!-- STOCK PHOTO 3: New York Event -->
+                        <div class="overflow-hidden  h-48">
+                            <div class="flex flex-col items-center justify-center h-full">
+                                <img src="./assets//newyork.jpg" alt="">
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-4 left-4 bg-secondary text-white px-3 py-1 rounded-full text-sm font-bold">
+                            July 4, 2024
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">National Networking - USA</h3>
+                        <p class="text-gray-600 mb-4">New York, USA</p>
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-map-marker-alt text-secondary mr-2"></i>
+                            <span>Manhattan Conference Center</span>
+                        </div>
+                        <div class="flex items-center mb-6">
+                            <i class="fas fa-clock text-secondary mr-2"></i>
+                            <span>9:00 AM - 5:00 PM</span>
+                        </div>
+                        <a href="https://app.wbiznex.com/"
+                            class="block text-center bg-primary text-white py-2 rounded-lg hover:bg-opacity-90 transition duration-300">Book
+                            Tickets</a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover transition duration-300">
+                    <div class="relative event-card">
+                        <!-- STOCK PHOTO 4: London Event -->
+                        <div class="overflow-hidden  h-48">
+                            <div class="flex flex-col items-center justify-center h-full">
+                               <img src="./assets//london.jpg" alt="london">
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-4 left-4 bg-secondary text-white px-3 py-1 rounded-full text-sm font-bold">
+                            July 11, 2024
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">National Networking - UK</h3>
+                        <p class="text-gray-600 mb-4">London, UK</p>
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-map-marker-alt text-secondary mr-2"></i>
+                            <span>Canary Wharf Business Center</span>
+                        </div>
+                        <div class="flex items-center mb-6">
+                            <i class="fas fa-clock text-secondary mr-2"></i>
+                            <span>9:00 AM - 5:00 PM</span>
+                        </div>
+                        <a href="https://app.wbiznex.com/"
+                            class="block text-center bg-primary text-white py-2 rounded-lg hover:bg-opacity-90 transition duration-300">Book
+                            Tickets</a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover transition duration-300">
+                    <div class="relative event-card">
+                        <!-- STOCK PHOTO 5: Dubai Event -->
+                        <div class="overflow-hidden  h-48">
+                            <div class="flex flex-col items-center justify-center h-full">
+                               <img src="./assets/Dubai.jpg" alt="Dubai">
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-4 left-4 bg-secondary text-white px-3 py-1 rounded-full text-sm font-bold">
+                            July 18, 2024
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">National Networking - UAE</h3>
+                        <p class="text-gray-600 mb-4">Dubai, UAE</p>
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-map-marker-alt text-secondary mr-2"></i>
+                            <span>Dubai Business Bay</span>
+                        </div>
+                        <div class="flex items-center mb-6">
+                            <i class="fas fa-clock text-secondary mr-2"></i>
+                            <span>9:00 AM - 5:00 PM</span>
+                        </div>
+                        <a href="https://app.wbiznex.com/"
+                            class="block text-center bg-primary text-white py-2 rounded-lg hover:bg-opacity-90 transition duration-300">Book
+                            Tickets</a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover transition duration-300">
+                    <div class="relative event-card">
+                        <!-- STOCK PHOTO 6: Singapore Event -->
+                        <div class="overflow-hidden  h-48">
+                            <div class="flex flex-col items-center justify-center h-full">
+                               <img src="./assets/Singapore.jpg" alt="Singapore">
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-4 left-4 bg-secondary text-white px-3 py-1 rounded-full text-sm font-bold">
+                            July 25, 2024
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Regional Networking - ASEAN</h3>
+                        <p class="text-gray-600 mb-4">Singapore</p>
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-map-marker-alt text-secondary mr-2"></i>
+                            <span>Marina Bay Business Hub</span>
+                        </div>
+                        <div class="flex items-center mb-6">
+                            <i class="fas fa-clock text-secondary mr-2"></i>
+                            <span>9:00 AM - 5:00 PM</span>
+                        </div>
+                        <a href="https://app.wbiznex.com/"
+                            class="block text-center bg-primary text-white py-2 rounded-lg hover:bg-opacity-90 transition duration-300">Book
+                            Tickets</a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover transition duration-300">
+                    <div class="relative event-card">
+                        <!-- STOCK PHOTO 7: Hong Kong Event -->
+                        <div class="overflow-hidden  h-48">
+                            <div class="flex flex-col items-center justify-center h-full">
+                              <img src="./assets/hongkong.jpg" alt="Hong Kong">
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-4 left-4 bg-secondary text-white px-3 py-1 rounded-full text-sm font-bold">
+                            July 28, 2024
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Regional Networking - East Asia</h3>
+                        <p class="text-gray-600 mb-4">Hong Kong</p>
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-map-marker-alt text-secondary mr-2"></i>
+                            <span>Central District Convention Center</span>
+                        </div>
+                        <div class="flex items-center mb-6">
+                            <i class="fas fa-clock text-secondary mr-2"></i>
+                            <span>9:00 AM - 5:00 PM</span>
+                        </div>
+                        <a href="https://app.wbiznex.com/"
+                            class="block text-center bg-primary text-white py-2 rounded-lg hover:bg-opacity-90 transition duration-300">Book
+                            Tickets</a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover transition duration-300">
+                    <div class="relative event-card">
+                        <!-- STOCK PHOTO 8: Paris Event -->
+                        <div class="overflow-hidden  h-48">
+                            <div class="flex flex-col items-center justify-center h-full">
+                               <img src="./assets/paris.jpg" alt="Paris">
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-4 left-4 bg-secondary text-white px-3 py-1 rounded-full text-sm font-bold">
+                            September 15, 2024
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">International Business Summit</h3>
+                        <p class="text-gray-600 mb-4">Paris, France</p>
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-map-marker-alt text-secondary mr-2"></i>
+                            <span>Le Grand Palais des Congrès</span>
+                        </div>
+                        <div class="flex items-center mb-6">
+                            <i class="fas fa-clock text-secondary mr-2"></i>
+                            <span>9:00 AM - 6:00 PM</span>
+                        </div>
+                        <a href="https://app.wbiznex.com/"
+                            class="block text-center bg-primary text-white py-2 rounded-lg hover:bg-opacity-90 transition duration-300">Book
+                            Tickets</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#"
+                    class="inline-flex items-center text-primary font-medium hover:text-secondary transition duration-300">
+                    View All Events
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Latest <span class="text-primary">Insights</span></h2>
+                <div class="w-20 h-1 bg-secondary mx-auto mb-6"></div>
+                <p class="max-w-3xl mx-auto">Stay updated with the latest business trends and networking strategies.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover transition duration-300">
+                    <!-- STOCK PHOTO 9: Hybrid Networking Blog -->
+                    <div class="overflow-hidden h-48">
+                        <div class="flex flex-col items-center justify-center h-full">
+                           <img src="./assets/insight1.jpeg" alt="Business Networking">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <span>June 28, 2024</span>
+                            <span class="mx-2">•</span>
+                            <span>Business Networking</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">The Power of Hybrid Networking in a Post-Pandemic World</h3>
+                        <p class="text-gray-600 mb-4">Discover how combining online and offline networking strategies
+                            can maximize your business growth potential.</p>
+                        <a href="https://app.wbiznex.com/"
+                            class="inline-flex items-center text-primary font-medium hover:text-secondary transition duration-300">
+                            Read More
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover transition duration-300">
+                    <!-- STOCK PHOTO 10: Global Business Blog -->
+                    <div class="overflow-hidden h-48">
+                        <div class="flex flex-col items-center justify-center h-full">
+                           <img src="./assets/insight2.jpeg" alt="Global Business">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <span>June 20, 2024</span>
+                            <span class="mx-2">•</span>
+                            <span>Global Business</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Navigating Cultural Differences in International Business
+                        </h3>
+                        <p class="text-gray-600 mb-4">Learn essential strategies for successful cross-cultural business
+                            interactions in today's global marketplace.</p>
+                        <a href="https://app.wbiznex.com/"
+                            class="inline-flex items-center text-primary font-medium hover:text-secondary transition duration-300">
+                            Read More
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover transition duration-300">
+                    <!-- STOCK PHOTO 11: ROI Blog -->
+                    <div class="overflow-hidden h-48">
+                        <div class="flex flex-col items-center justify-center h-full">
+                           <img src="./assets/insight3.jpeg" alt="Entrepreneurship">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <span>June 15, 2024</span>
+                            <span class="mx-2">•</span>
+                            <span>Entrepreneurship</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">5 Ways to Maximize Your ROI from Business Networking Events
+                        </h3>
+                        <p class="text-gray-600 mb-4">Practical tips to ensure you get the most value from every
+                            networking event you attend.</p>
+                        <a href="https://app.wbiznex.com/"
+                            class="inline-flex items-center text-primary font-medium hover:text-secondary transition duration-300">
+                            Read More
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="https://app.wbiznex.com/"
+                    class="inline-flex items-center text-primary font-medium hover:text-secondary transition duration-300">
+                    View All Articles
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Download Section -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <div class="flex items-center mb-6">
+                        <!-- Replace with your logo from Canva's brand kit -->
+                        <div class="logo-placeholder mr-3">
+                            <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Define clipPath for circle -->
+                                <defs>
+                                    <clipPath id="circleClip">
+                                        <circle cx="30" cy="30" r="28" />
+                                    </clipPath>
+                                </defs>
+                                <!-- Background circle -->
+                                <circle cx="30" cy="30" r="28" fill="#F4F4FA" />
+                                <!-- Image clipped to the circle -->
+                                <image href="./assets/wbiznex_logo.png" x="2" y="2" width="56" height="56"
+                                    clip-path="url(#circleClip)" />
+                            </svg>
+
+                          
+                        </div>
+                        <h2 class="text-3xl font-bold">Download the WBIZNEX App</h2>
+                    </div>
+                    <p class="text-lg mb-8 opacity-90">Access our exclusive members-only mobile app to connect with
+                        business professionals worldwide and stay updated on upcoming events.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="https://app.wbiznex.com/"
+                            class="bg-white text-primary px-6 py-3 rounded-lg flex items-center justify-center hover:bg-opacity-90 transition duration-300">
+                            <i class="fab fa-apple text-2xl mr-3"></i>
+                            <div>
+                                <div class="text-xs">Download on the</div>
+                                <div class="font-bold">App Store</div>
+                            </div>
+                        </a>
+                        <a href="https://app.wbiznex.com/"
+                            class="bg-white text-primary px-6 py-3 rounded-lg flex items-center justify-center hover:bg-opacity-90 transition duration-300">
+                            <i class="fab fa-google-play text-2xl mr-3"></i>
+                            <div>
+                                <div class="text-xs">Get it on</div>
+                                <div class="font-bold">Google Play</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <!-- STOCK PHOTO 12: App Mockup -->
+                    <div class=" w-64 h-96 rounded-3xl overflow-hidden">
+                        <div class="flex flex-col items-center justify-center h-full">
+                            <img src="./assets/app.jpeg" alt="WBIZNEX APP">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Get In <span class="text-primary">Touch</span></h2>
+                <div class="w-20 h-1 bg-secondary mx-auto mb-6"></div>
+                <p class="max-w-3xl mx-auto">Have questions about WBIZNEX? Contact us and our team will get back to you
+                    shortly.</p>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-8 mt-12">
+                <div class="md:w-1/2 bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-primary text-white rounded-full p-3 mr-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Headquarters</h4>
+                                <p class="text-gray-600">123 Business Avenue, Suite 500<br>New York, NY 10001, USA</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="bg-primary text-white rounded-full p-3 mr-4">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Phone</h4>
+                                <p class="text-gray-600">+1 (302) 208-2324</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="bg-primary text-white rounded-full p-3 mr-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Email</h4>
+                                <p class="text-gray-600">hello@wbiznex.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="bg-primary text-white rounded-full p-3 mr-4">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Office Hours</h4>
+                                <p class="text-gray-600">Monday - Friday: 9:00 AM - 5:00 PM<br>Saturday - Sunday: Closed
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <h4 class="font-bold mb-4">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#"
+                                class="bg-primary text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-secondary transition duration-300">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#"
+                                class="bg-primary text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-secondary transition duration-300">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#"
+                                class="bg-primary text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-secondary transition duration-300">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#"
+                                class="bg-primary text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-secondary transition duration-300">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:w-1/2 bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold mb-6">Send Us a Message</h3>
+                    <form action="https://formsubmit.co/66ac0b4d757ea307569932879ce78d9c" method="POST">
+                        <input type="hidden" name="_template" value="table">
+                    
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                            <input type="text" id="name" name="name"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" required>
+                        </div>
+                    
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                            <input type="email" id="email" name="email"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" required>
+                        </div>
+                    
+                        <div class="mb-4">
+                            <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" required>
+                        </div>
+                    
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" required></textarea>
+                        </div>
+                    
+                        <button type="submit"
+                            class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-opacity-90 transition duration-300 w-full">
+                            Send Message
+                        </button>
+                    </form>
+                    
+
+
+                    <!-- <form action="https://formsubmit.co/ferrusbelsingh@gmail.com" method="POST">
+                        <input type="hidden" name="_template" value="table">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                            <input type="text" id="name" name="name"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                            <input type="email" id="email"  name="email"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                            <textarea id="message" rows="5" name="message" 
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-opacity-90 transition duration-300 w-full">Send
+                            Message</button>
+                    </form> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <!-- Replace with your logo from Canva's brand kit -->
+                        <div class="logo-placeholder mr-3">
+                            <svg width="40" height="40" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Define clipPath for circle -->
+                                <defs>
+                                    <clipPath id="circleClip">
+                                        <circle cx="30" cy="30" r="28" />
+                                    </clipPath>
+                                </defs>
+                                <!-- Background circle -->
+                                <circle cx="30" cy="30" r="28" fill="#F4F4FA" />
+                                <!-- Image clipped to the circle -->
+                                <image href="./assets/wbiznex_logo.png" x="2" y="2" width="56" height="56"
+                                    clip-path="url(#circleClip)" />
+                            </svg>
+                        </div>
+                        <span class="text-white font-bold text-2xl logo-text">WBIZ<span
+                                class="text-secondary">NEX</span></span>
+                    </div>
+                    <p class="mb-6 text-gray-400">World Business Nexus is a global business networking platform
+                        connecting entrepreneurs and businesses worldwide.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-secondary footer-link">Home</a></li>
+                        <li><a href="#features" class="text-gray-400 hover:text-secondary footer-link">Features</a></li>
+                        <li><a href="#memberships"
+                                class="text-gray-400 hover:text-secondary footer-link">Memberships</a></li>
+                        <li><a href="#events" class="text-gray-400 hover:text-secondary footer-link">Events</a></li>
+                        <li><a href="#blog" class="text-gray-400 hover:text-secondary footer-link">Blog</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-secondary footer-link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Resources</h3>
+                    <ul class="space-y-3">
+                        <!-- <li><a href="#" class="text-gray-400 hover:text-secondary footer-link">FAQ</a></li> -->
+                        <li><a href="./privacy.html" class="text-gray-400 hover:text-secondary footer-link">Privacy Policy</a></li>
+                        <li><a href="./terms-and-condition.html" class="text-gray-400 hover:text-secondary footer-link">Terms of Service</a></li>
+                        <!-- <li><a href="#" class="text-gray-400 hover:text-secondary footer-link">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-secondary footer-link">Press Kit</a></li> -->
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Subscribe to our newsletter for the latest updates and insights.</p>
+                    <form class="mb-4">
+                        <div class="flex">
+                            <input type="email" placeholder="Your email address"
+                                class="px-4 py-2 w-full rounded-l-lg focus:outline-none">
+                            <button type="submit"
+                                class="bg-secondary text-white px-4 py-2 rounded-r-lg hover:bg-opacity-90 transition duration-300">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <p class="text-gray-400 text-sm">By subscribing, you agree to our Privacy Policy.</p>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">&copy; 2025 WBIZNEX. All rights reserved.</p>
+                    <div class="flex space-x-6">
+                        <a href="privacy.html" class="text-gray-400 hover:text-secondary text-sm footer-link">Privacy Policy</a>
+                        <a href="terms-and-condition.html" class="text-gray-400 hover:text-secondary text-sm footer-link">Terms of Service</a>
+                        <!-- <a href="#" class="text-gray-400 hover:text-secondary text-sm footer-link">Cookie Policy</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Active nav link highlighting
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+
+                if (window.pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+    <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'93e1a73c44999374',t:'MTc0Njk2NjI2Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+</body>
+
+</html>
