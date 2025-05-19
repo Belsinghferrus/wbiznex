@@ -1,0 +1,8 @@
+/* TEAM */
+Developer: Belsingh Ferrus
+Contact: hello@wbiznex.com
+Website: https://www.wbiznex.com
+
+/* SITE */
+Last update: 2025-05-19
+Standards: HTML5, CSS3, JavaScript
