@@ -4,67 +4,104 @@
     <url>
         <loc>https://www.wbiznex.com/</loc>
         <priority>1.0</priority>
+        <changefreq>daily</changefreq>
     </url>
 
     <!-- Sections -->
     <url>
         <loc>https://www.wbiznex.com/#home</loc>
         <priority>0.9</priority>
+        <changefreq>daily</changefreq>
     </url>
     <url>
         <loc>https://www.wbiznex.com/#features</loc>
         <priority>0.8</priority>
+        <changefreq>weekly</changefreq>
     </url>
     <url>
         <loc>https://www.wbiznex.com/#memberships</loc>
         <priority>0.8</priority>
+        <changefreq>weekly</changefreq>
     </url>
     <url>
         <loc>https://www.wbiznex.com/#events</loc>
         <priority>0.8</priority>
+        <changefreq>weekly</changefreq>
     </url>
     <url>
         <loc>https://www.wbiznex.com/#blog</loc>
         <priority>0.7</priority>
+        <changefreq>weekly</changefreq>
     </url>
     <url>
         <loc>https://www.wbiznex.com/#contact</loc>
         <priority>0.7</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+
+    <!-- Blog Posts -->
+    <url>
+        <loc>https://www.wbiznex.com/blog/how-to-grow-your-business-network</loc>
+        <priority>0.6</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.wbiznex.com/blog/top-10-business-networking-tips</loc>
+        <priority>0.6</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.wbiznex.com/blog/importance-of-global-business-networking</loc>
+        <priority>0.6</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.wbiznex.com/blog/why-choose-wbiznex-for-networking</loc>
+        <priority>0.6</priority>
+        <changefreq>monthly</changefreq>
     </url>
 
     <!-- External Links -->
     <url>
         <loc>https://app.wbiznex.com/</loc>
         <priority>0.6</priority>
+        <changefreq>monthly</changefreq>
     </url>
     <url>
         <loc>https://m.facebook.com/profile.php?id=61576212310623</loc>
         <priority>0.5</priority>
+        <changefreq>monthly</changefreq>
     </url>
     <url>
         <loc>https://x.com/wbiznex</loc>
         <priority>0.5</priority>
+        <changefreq>monthly</changefreq>
     </url>
     <url>
         <loc>https://www.youtube.com/@wbiznex</loc>
         <priority>0.5</priority>
+        <changefreq>monthly</changefreq>
     </url>
     <url>
         <loc>https://www.linkedin.com/in/wbiznex-world-business-nexus-841785366</loc>
         <priority>0.5</priority>
+        <changefreq>monthly</changefreq>
     </url>
     <url>
         <loc>https://instagram.com/Wbiznex</loc>
         <priority>0.5</priority>
+        <changefreq>monthly</changefreq>
     </url>
 
     <!-- Privacy Policy and Terms -->
     <url>
         <loc>https://www.wbiznex.com/privacy.html</loc>
         <priority>0.4</priority>
+        <changefreq>yearly</changefreq>
     </url>
     <url>
         <loc>https://www.wbiznex.com/terms-and-condition.html</loc>
         <priority>0.4</priority>
+        <changefreq>yearly</changefreq>
     </url>
 </urlset>
