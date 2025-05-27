@@ -2,6 +2,17 @@
 <html lang="en">
 
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TKL7NCRW');</script>
+    <!-- End Google Tag Manager -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WBIZNEX - World Business Nexus | Global Business Networking</title>
@@ -181,9 +192,79 @@
             color: #00A0E3;
         }
     </style>
+
+    
 </head>
 
 <body class="font-sans text-dark">
+
+  
+
+    <!-- Google Tag Manager (noscript) -->
+    <!-- <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKL7NCRW" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+    </noscript> -->
+    <!-- End Google Tag Manager (noscript) -->
+
+
+    <!-- Cookie Consent Box -->
+    <div id="cookie-consent"
+        class="fixed bottom-10 left-6 z-50 w-full max-w-sm bg-light text-dark rounded-xl shadow-xl p-6 flex flex-col gap-4 border border-gray-300">
+        <div class="text-sm">
+            We use cookies to improve your experience and for analytics.
+            Read our
+            <a href="privacy.html" class="underline text-primary hover:text-secondary">Privacy Policy</a>.
+        </div>
+        <div class="flex gap-3 justify-end">
+            <button onclick="handleCookieConsent(false)"
+                class="bg-gray-200 hover:bg-gray-300 text-dark text-sm px-4 py-2 rounded-md transition">
+                Reject
+            </button>
+            <button onclick="handleCookieConsent(true)"
+                class="bg-primary hover:bg-secondary text-white text-sm px-4 py-2 rounded-md transition">
+                Accept
+            </button>
+        </div>
+    </div>
+
+
+
+
+    <!-- Sticky Bottom Banner -->
+    <div id="sticky-bar"  tabindex="-1"
+        class="fixed bottom-10 z-40 flex flex-col md:flex-row justify-between items-center w-[calc(100%-2rem)] p-4 -translate-x-1/2 bg-primary border border-light rounded-lg shadow-md lg:max-w-6xl left-1/2 text-light">
+        <div class="flex flex-col items-start mb-3 md:items-center md:flex-row md:mb-0 md:me-4">
+            <a href="https://app.wbiznex.com"
+                class="flex items-center mb-2 md:pe-4 md:me-4 md:border-e md:mb-0 border-light">
+                <div
+                    class="w-10 h-10 rounded-full bg-secondary me-2 flex items-center justify-center font-bold text-white text-xs">
+                    <img src="./assets/wbiznex-invert-logo.png" alt="wbiznex logo">
+                </div>
+                <span class="text-md font-semibold whitespace-nowrap">WBIZNEX</span>
+            </a>
+            <p class="text-md font-normal text-light">Join our pre-launch community 🎉 Experience features and connect
+                globally.
+            </p>
+        </div>
+        <div class="flex items-center shrink-0">
+            <a href="https://app.wbiznex.com/"
+                class="bg-secondary hover:bg-blue-500 text-white text-sm font-semibold px-4 py-2 rounded-lg transition">
+                Join Now
+            </a>
+            <button onclick="document.getElementById('sticky-bar').classList.add('hidden')" type="button"
+                class="shrink-0 inline-flex justify-center w-7 h-7 items-center text-light hover:bg-light hover:text-primary rounded-lg text-sm p-1.5 transition">
+                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 14 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                </svg>
+                <span class="sr-only">Close banner</span>
+            </button>
+        </div>
+    </div>
+
+
     <!-- Navigation -->
     <nav class="bg-white shadow-md fixed w-full z-50">
         <div class="container mx-auto px-4 py-3">
@@ -206,7 +287,6 @@
                     <a href="#memberships" class="nav-link font-medium">Memberships</a>
                     <a href="#events" class="nav-link font-medium">Events</a>
                     <a href="#blog" class="nav-link font-medium">Blog</a>
-                    <a href="#contact" class="nav-link font-medium">Contact</a>
                     <a href="https://app.wbiznex.com/"
                         class="bg-secondary text-white px-6 py-2 rounded-full hover:bg-opacity-90 transition duration-300">Login</a>
                 </div>
@@ -236,13 +316,14 @@
         </div>
     </nav>
 
+
+
     <!-- Hero Section -->
     <section id="home" class="hero-gradient text-white pt-28 pb-20">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-10 md:mb-0">
                     <div class="flex items-center mb-6">
-                        <!-- Replace with your logo from Canva's brand kit -->
                         <div class="logo-placeholder mr-3">
                             <img width="120" height="120" src="./assets/wbiznex-invert-logo.png" alt="wbiznex logo">
                         </div>
@@ -271,6 +352,8 @@
             </div>
         </div>
     </section>
+
+
 
     <!-- About Section -->
     <section class="py-16 bg-light">
@@ -958,126 +1041,6 @@
 
 
     <!-- Contact Section -->
-    <!-- <section id="contact" class="py-16 bg-light">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold mb-4">Get In <span class="text-primary">Touch</span></h2>
-                <div class="w-20 h-1 bg-secondary mx-auto mb-6"></div>
-                <p class="max-w-3xl mx-auto">Have questions about WBIZNEX? Contact us and our team will get back to you
-                    shortly.</p>
-            </div>
-
-            <div class="flex flex-col md:flex-row gap-8 mt-12">
-                <div class="md:w-1/2 bg-white p-8 rounded-lg shadow-md">
-                    <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <div class="bg-primary text-white rounded-full p-3 mr-4">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold mb-1">Headquarters</h4> 
-                                <p class="text-gray-600">No. 8, The Green, Suite B<br>Dover, Zip Code-19901, Delaware, USA.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start">
-                            <div class="bg-primary text-white rounded-full p-3 mr-4">
-                                <i class="fas fa-phone-alt"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold mb-1">Phone</h4>
-                                <p class="text-gray-600">+1 (302) 208-2324</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start">
-                            <div class="bg-primary text-white rounded-full p-3 mr-4">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold mb-1">Email</h4>
-                                <p class="text-gray-600">hello@wbiznex.com</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start">
-                            <div class="bg-primary text-white rounded-full p-3 mr-4">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold mb-1">Office Hours</h4>
-                                <p class="text-gray-600">Monday - Friday: 9:00 AM - 5:00 PM<br>Saturday - Sunday: Closed
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-8">
-                        <h4 class="font-bold mb-4">Follow Us</h4>
-                        <div class="flex space-x-4">
-                            <a href="#"
-                                class="bg-primary text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-secondary transition duration-300">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#"
-                                class="bg-primary text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-secondary transition duration-300">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#"
-                                class="bg-primary text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-secondary transition duration-300">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="#"
-                                class="bg-primary text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-secondary transition duration-300">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="md:w-1/2 bg-white p-8 rounded-lg shadow-md">
-                    <h3 class="text-2xl font-bold mb-6">Send Us a Message</h3>
-                    <form action="https://formsubmit.co/66ac0b4d757ea307569932879ce78d9c" method="POST">
-                        <input type="hidden" name="_template" value="table">
-
-                        <div class="mb-4">
-                            <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
-                            <input type="text" id="name" name="name"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                                required>
-                        </div>
-
-                        <div class="mb-4">
-                            <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
-                            <input type="email" id="email" name="email"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                                required>
-                        </div>
-
-                        <div class="mb-4">
-                            <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
-                            <input type="text" id="subject" name="subject"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                                required>
-                        </div>
-
-                        <div class="mb-6">
-                            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
-                            <textarea id="message" name="message" rows="5"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                                required></textarea>
-                        </div>
-
-                        <button type="submit"
-                            class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-opacity-90 transition duration-300 w-full">
-                            Send Message
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
     <!-- Footer -->
     <footer class="bg-primary text-white pt-16 pb-8">
@@ -1211,6 +1174,53 @@
 
     <!------ S C R I P T S  -   D O   N O T    T O U C H ------>
     <script>
+        // Cookie Consent and Google Tag Manager
+        const GTM_ID = 'GTM-TKL7NCRW';
+        function handleCookieConsent(accepted) {
+          document.getElementById('cookie-consent')?.classList.add('hidden');
+          document.getElementById('sticky-bar')?.classList.remove('hidden');
+          localStorage.setItem('cookie_consent', accepted ? 'accepted' : 'rejected');
+          if (accepted) {
+            loadGTM();
+          }
+        }
+      
+        function loadGTM() {
+          if (document.getElementById('gtm-script')) return;
+          const script = document.createElement('script');
+          script.id = 'gtm-script';
+          script.async = true;
+          script.src = `https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`;
+          document.head.appendChild(script);
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({ event: 'gtm.js', 'gtm.start': new Date().getTime() });
+        }
+      
+        window.addEventListener('DOMContentLoaded', () => {
+          const consent = localStorage.getItem('cookie_consent');
+          if (consent === 'accepted') {
+            loadGTM();
+            document.getElementById('cookie-consent')?.classList.add('hidden');
+            document.getElementById('sticky-bar')?.classList.remove('hidden');
+          } else if (consent === 'rejected') {
+            document.getElementById('cookie-consent')?.classList.add('hidden');
+            document.getElementById('sticky-bar')?.classList.remove('hidden');
+          } else {
+            // Show consent if not yet set
+            document.getElementById('cookie-consent')?.classList.remove('hidden');
+            document.getElementById('sticky-bar')?.classList.add('hidden');
+          }
+        });
+
+        // Close Sticky Banner 
+        function closeBanner() {
+            document.getElementById('stickyBanner').classList.add('hidden');
+        }
+
+      </script>
+      
+    <script>
+
         // Mobile menu toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -1266,6 +1276,8 @@
             });
         });
     </script>
+
+
     <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'93e1a73c44999374',t:'MTc0Njk2NjI2Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
