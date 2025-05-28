@@ -210,7 +210,7 @@
 
     <!-- Cookie Consent Box -->
     <div id="cookie-consent"
-        class="fixed bottom-10 left-2 z-50 w-full max-w-sm bg-light text-dark rounded-xl shadow-xl p-6 flex flex-col gap-4 border border-gray-300">
+        class="fixed bottom-10 left-1 z-50 w-full max-w-sm bg-light text-dark rounded-xl shadow-xl p-6 flex flex-col gap-4 border border-gray-300">
         <div class="text-sm">
             We use cookies to improve your experience and for analytics.
             Read our
@@ -233,16 +233,16 @@
 
     <!-- Sticky Bottom Banner -->
     <div id="sticky-bar"  tabindex="-1"
-        class="fixed bottom-10 z-40 flex flex-col md:flex-row justify-between items-center w-[calc(100%-2rem)] p-4 -translate-x-1/2 bg-primary border border-light rounded-lg shadow-md lg:max-w-6xl left-1/2 text-light">
+        class="fixed bottom-5 z-40 flex flex-col md:flex-row justify-between items-center w-[calc(100%-2rem)] p-3 -translate-x-1/2 bg-primary border border-light rounded-lg shadow-md lg:max-w-6xl left-1/2 text-light">
         <div class="flex flex-col items-start mb-3 md:items-center md:flex-row md:mb-0 md:me-4">
-            <a href="https://app.wbiznex.com"
+            <!-- <a href="https://app.wbiznex.com"
                 class="flex items-center mb-2 md:pe-4 md:me-4 md:border-e md:mb-0 border-light">
                 <div
                     class="w-10 h-10 rounded-full bg-secondary me-2 flex items-center justify-center font-bold text-white text-xs">
                     <img src="./assets/wbiznex-invert-logo.png" alt="wbiznex logo">
                 </div>
                 <span class="text-md font-semibold whitespace-nowrap">WBIZNEX</span>
-            </a>
+            </a> -->
             <p class="text-md font-normal text-light">Join our pre-launch community 🎉 Experience features and connect
                 globally.
             </p>
@@ -252,7 +252,7 @@
                 class="bg-secondary hover:bg-blue-500 text-white text-sm font-semibold px-4 py-2 rounded-lg transition">
                 Join Now
             </a>
-            <button onclick="document.getElementById('sticky-bar').classList.add('hidden')" type="button"
+            <!-- <button onclick="document.getElementById('sticky-bar').classList.add('hidden')" type="button"
                 class="shrink-0 inline-flex justify-center w-7 h-7 items-center text-light hover:bg-light hover:text-primary rounded-lg text-sm p-1.5 transition">
                 <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                     viewBox="0 0 14 14">
@@ -260,7 +260,7 @@
                         d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
                 </svg>
                 <span class="sr-only">Close banner</span>
-            </button>
+            </button> -->
         </div>
     </div>
 
@@ -1174,7 +1174,7 @@
 
     <!------ S C R I P T S  -   D O   N O T    T O U C H ------>
     <script>
-        // Cookie Consent and Google Tag Manager
+        // Cookie Consent 
         const GTM_ID = 'GTM-TKL7NCRW';
         function handleCookieConsent(accepted) {
           document.getElementById('cookie-consent')?.classList.add('hidden');
@@ -1185,6 +1185,7 @@
           }
         }
       
+        //google Tag Manager script loading
         function loadGTM() {
           if (document.getElementById('gtm-script')) return;
           const script = document.createElement('script');
@@ -1196,6 +1197,7 @@
           window.dataLayer.push({ event: 'gtm.js', 'gtm.start': new Date().getTime() });
         }
       
+
         window.addEventListener('DOMContentLoaded', () => {
           const consent = localStorage.getItem('cookie_consent');
           if (consent === 'accepted') {
@@ -1218,7 +1220,6 @@
         }
 
       </script>
-      
     <script>
 
         // Mobile menu toggle
@@ -1258,7 +1259,6 @@
 
         window.addEventListener('scroll', () => {
             let current = '';
-
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.clientHeight;
@@ -1267,7 +1267,6 @@
                     current = section.getAttribute('id');
                 }
             });
-
             navLinks.forEach(link => {
                 link.classList.remove('active');
                 if (link.getAttribute('href') === `#${current}`) {
@@ -1276,8 +1275,6 @@
             });
         });
     </script>
-
-
     <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'93e1a73c44999374',t:'MTc0Njk2NjI2Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
