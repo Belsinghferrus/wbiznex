@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WBIZNEX Pre-Launch</title>
+    <link rel="icon" href="assets/wbiznex_logo.png" type="image/x-icon">
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1103A6',
+                        secondary: '#00A0E3',
+                        light: '#F4F4FA',
+                        dark: '#212529'
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap');
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .hero-gradient {
+        background: linear-gradient(135deg, #1103A6 0%, #00A0E3 100%);
+    }
+
+    .card-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-link {
+        position: relative;
+    }
+
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        background-color: #00A0E3;
+        transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+        width: 100%;
+    }
+
+    .active::after {
+        width: 100%;
+    }
+
+    .event-card:hover .event-overlay {
+        opacity: 1;
+    }
+
+    .tab-active {
+        color: #1103A6;
+        border-bottom: 2px solid #1103A6;
+    }
+
+    .logo-text {
+        font-weight: 700;
+        letter-spacing: 0.5px;
+    }
+
+    .logo-shine {
+        animation: shine 3s infinite;
+        background: linear-gradient(to right, #1103A6 0%, #00A0E3 50%, #1103A6 100%);
+        background-size: 200% auto;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    @keyframes shine {
+        to {
+            background-position: 200% center;
+        }
+    }
+
+    .stock-image {
+        background-color: #e5e7eb;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #6b7280;
+        font-size: 0.875rem;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .stock-image::after {
+        content: "Replace with Canva stock photo";
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 4px;
+        font-size: 12px;
+    }
+
+    .event-image {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .footer-link:hover {
+        color: #00A0E3;
+        transition: all 0.3s ease;
+    }
+
+    .social-icon {
+        transition: all 0.3s ease;
+    }
+
+    .social-icon:hover {
+        transform: translateY(-3px);
+        color: #00A0E3;
+    }
+</style>
+
+</head>
+<body>
+    
+    <!-- <div class="flex flex-col md:flex-row mt-12 max-w-8xl mx-auto"> -->
+        <div id="inquiryForm" class="bg-white  shadow-lg overflow-hidden flex-1 card-hover transition duration-300 border-2 border-secondary relative flex flex-col">
+       
+             
+            <!-- Badge -->
+        <div class="absolute top-0 right-0 bg-secondary text-white px-4 py-1 text-sm font-bold">
+           
+            PRE-LAUNCH
+        </div>
+    
+        <!-- Header -->
+        <div class="bg-primary text-white p-6 text-center">
+            
+            <h3 class="text-2xl font-bold">Pre-Launch Membership</h3>
+            <p class="mt-2 opacity-90 "><strong>Just USD 50 for 30 Days</strong> </p>
+    
+           
+        </div>
+    
+        <!-- Content -->
+        <div class="p-8 flex-1 flex flex-col justify-between">
+            <ul class="space-y-4 mb-8">
+                <li class="flex items-start">
+                    <svg class="w-5 h-5 text-secondary mr-2 mt-1 flex-shrink-0" fill="currentColor"
+                        viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <span><strong>Global Access</strong> Connect with elite professionals via the WBIZNEX
+                        app and join weekly online networking with members from London, New York, Dubai,
+                        Singapore & Hong Kong.</span>
+                </li>
+                <li class="flex items-start">
+                    <svg class="w-5 h-5 text-secondary mr-2 mt-1 flex-shrink-0" fill="currentColor"
+                        viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <span><strong>Promote Your Business</strong> Showcase your products/services to a
+                        curated global audience and attract new clients.
+                    </span>
+                </li>
+                <li class="flex items-start">
+                    <svg class="w-5 h-5 text-secondary mr-2 mt-1 flex-shrink-0" fill="currentColor"
+                        viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <span><strong>Hybrid Model Ahead</strong> Pre-launch is fully online. Full membership
+                        includes 60% in-person + 40% online networking across 100 cities in 2 years.</span>
+                </li>
+                <li class="flex items-start">
+                    <svg class="w-5 h-5 text-secondary mr-2 mt-1 flex-shrink-0" fill="currentColor"
+                        viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <span><strong>WTP Priority Access</strong> First 500 pre-launch members who actively
+                        engage will get priority for the World Trade Parliament’s Global Business Council
+                        (launching June 2027).</span>
+                </li>
+                <li class="flex items-start">
+                    <svg class="w-5 h-5 text-secondary mr-2 mt-1 flex-shrink-0" fill="currentColor"
+                        viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <span><strong>Exclusive Benefits </strong> Get 50% off annual membership after
+                        pre-launch + earn up to $3,000 via our Ambassador referral program.</span>
+                </li>
+              
+            </ul>
+            <!-- <div class="mt-8 text-center">
+                <a href="https://app.wbiznex.com/"
+                    class="bg-primary text-white px-8 py-3 rounded-full inline-block hover:bg-opacity-90 transition duration-300">Subscribe
+                    Now</a>
+            </div> -->
+    
+            <!-- <button onclick="toggleForm()"
+                class="hidden md:inline-block bg-primary text-white px-6 py-2 rounded-full">
+                Fill Form
+            </button> -->
+            <!-- Zoho Form -->
+            <div id="zohoForm" class="">
+                <iframe aria-label="Inquiry Form" frameborder="0"
+                    style="height: 600px; width: 100%; border: none;"
+                    src="https://forms.zohopublic.in/worldtradeparliamentllc1/form/InquiryForm/formperma/Qg_4jbE_xNCMguRT-N5xwu9dJEO0MVNGfy4fGhUSw7A"
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+ <!-- Footer -->
+ <footer class="bg-primary text-white pt-16 pb-8">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            <div>
+                <div class="flex items-center mb-6">
+                    <div class="logo-placeholder mr-3">
+                        <img width="120" height="120" src="./assets/wbiznex-invert-logo.png" alt="wbiznex logo">
+                    </div>
+                    <span class="text-white font-bold text-2xl logo-text">WBIZ<span
+                            class="text-secondary">NEX</span></span>
+                </div>
+                <p class="mb-6 text-gray-400">World Business Nexus is a global business networking platform
+                    connecting entrepreneurs and businesses worldwide.</p>
+                <div class="flex space-x-4">
+                    <a href="https://m.facebook.com/profile.php?id=61576212310623"
+                        class="text-gray-400 hover:text-white social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://x.com/wbiznex" class="text-gray-400 hover:text-white social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@wbiznex" class="text-gray-400 hover:text-white social-icon">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/wbiznex-world-business-nexus-841785366"
+                        class="text-gray-400 hover:text-white social-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://instagram.com/Wbiznex" class="text-gray-400 hover:text-white social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-bold mb-6">Quick Links</h3>
+                <ul class="space-y-3">
+                    <li><a href="./index.html#home" class="text-gray-400 hover:text-secondary footer-link">Home</a></li>
+                    <li><a href="./index.html#features" class="text-gray-400 hover:text-secondary footer-link">Features</a></li>
+                    <li><a href="./index.html#memberships"
+                            class="text-gray-400 hover:text-secondary footer-link">Memberships</a></li>
+                    <li><a href="./index.html#events" class="text-gray-400 hover:text-secondary footer-link">Events</a></li>
+                    <li><a href="./index.html#blog" class="text-gray-400 hover:text-secondary footer-link">Blog</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-bold mb-6">Reach Us</h3>
+                <!-- C O N T A C T  S E C T I O N   -   F O O T E R -->
+                <div class="space-y-6">
+                    <div class="flex items-start">
+                        <div class="bg-primary text-white rounded-full p-3 mr-4">
+                            <i class="fas fa-map-marker-alt text-gray-300"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-1 text-gray-300">World Trade Parliament LLC</h4>
+                            <p class="text-gray-400">No. 8, The Green, Suite B<br>Dover, Zip Code-19901, Delaware,
+                                USA.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="bg-primary text-white rounded-full p-3 mr-4">
+                            <i class="fas fa-phone-alt text-gray-300"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-1 text-gray-300">Phone</h4>
+                            <p class="text-gray-400">+1 (302) 208-2324</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="bg-primary text-white rounded-full p-3 mr-4">
+                            <i class="fas fa-envelope text-gray-300"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-1 text-gray-300">Email</h4>
+                            <p class="text-gray-400">hello@wbiznex.com</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="bg-primary text-white rounded-full p-3 mr-4">
+                            <i class="fas fa-clock text-gray-300"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-1 text-gray-300">Office Hours</h4>
+                            <p class="text-gray-400">Monday - Friday: 9:00 AM - 5:00 PM<br>Saturday - Sunday: Closed
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- E N D  O F   C O N T A C T  S E C T I O N -->
+            </div>
+            <div>
+                <h3 class="text-lg font-bold mb-6">Newsletter</h3>
+                <p class="text-gray-400 mb-4">Subscribe to our newsletter for the latest updates and insights.</p>
+                <form class="mb-4">
+                    <div class="flex">
+                        <input type="email" placeholder="Your email address"
+                            class="px-4 py-2 w-full rounded-l-lg focus:outline-none">
+                        <button type="submit"
+                            class="bg-secondary text-white px-4 py-2 rounded-r-lg hover:bg-opacity-90 transition duration-300">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </form>
+                <p class="text-gray-400 text-sm">By subscribing, you agree to our Privacy Policy.</p>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800 pt-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">&copy; 2025 WBIZNEX. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="privacy.html" class="text-gray-400 hover:text-secondary text-sm footer-link">Privacy
+                        Policy</a>
+                    <a href="terms-and-condition.html"
+                        class="text-gray-400 hover:text-secondary text-sm footer-link">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</html>
+
+
+
+
