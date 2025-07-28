@@ -45,6 +45,24 @@ function closeBanner() {
 
 
 
+function showInternationalhModal() {
+    document.getElementById('prelaunch-modal-international').classList.remove('hidden');
+  }
+
+  function showNationalModal() {
+    document.getElementById('prelaunch-modal-national').classList.remove('hidden');
+  }
+
+  function closeInternationalModal() {
+    document.getElementById('prelaunch-modal-international').classList.add('hidden');
+  }
+
+
+  function closeNationalModal() {
+    document.getElementById('prelaunch-modal-national').classList.add('hidden');
+  }
+
+
 // Mobile menu toggle
 const mobileMenuButton = document.getElementById('mobile-menu-button');
 const mobileMenu = document.getElementById('mobile-menu');
@@ -134,3 +152,6 @@ function toggleZohoForm() {
                 else { var e = document.onreadystatechange || function () {
                     
                 }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();
+
+
+

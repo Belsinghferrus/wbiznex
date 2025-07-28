@@ -228,10 +228,8 @@
             Join our pre-launch community 🎉 Experience features and connect globally.
         </div>
 
-        <button 
-            class="bg-secondary hover:bg-blue-500 text-white text-sm font-semibold px-4 py-2 rounded-lg transition">
-            <a
-                href="./pre-launch.html">
+        <button class="bg-secondary hover:bg-blue-500 text-white text-sm font-semibold px-4 py-2 rounded-lg transition">
+            <a href="./pre-launch.html">
                 Apply Now
             </a>
         </button>
@@ -516,6 +514,8 @@
         </div>
     </section>
 
+
+
     <!-- Memberships Section -->
     <section id="memberships" class="py-16 bg-white">
         <div class="container mx-auto px-4">
@@ -576,8 +576,8 @@
                             </li>
                         </ul>
                         <div class="mt-8 text-center">
-                            <a href="https://app.wbiznex.com/"
-                                class="bg-primary text-white px-8 py-3 rounded-full inline-block hover:bg-opacity-90 transition duration-300">Subscribe
+                            <a onclick="showNationalModal()"
+                                class="bg-primary cursor-pointer text-white px-8 py-3 rounded-full inline-block hover:bg-opacity-90 transition duration-300">Subscribe
                                 Now</a>
                         </div>
                     </div>
@@ -645,8 +645,8 @@
                             </li>
                         </ul>
                         <div class="mt-8 text-center">
-                            <a href="https://app.wbiznex.com/"
-                                class="bg-primary text-white px-8 py-3 rounded-full inline-block hover:bg-opacity-90 transition duration-300">Subscribe
+                            <a onclick="showInternationalhModal()"
+                                class="bg-primary cursor-pointer text-white px-8 py-3 rounded-full inline-block hover:bg-opacity-90 transition duration-300">Subscribe
                                 Now</a>
                         </div>
                     </div>
@@ -665,7 +665,7 @@
                         <h3 class="text-2xl font-bold">Pre-Launch Membership</h3>
                         <p class="mt-2 opacity-90 "><strong>Just USD 50 for 30 Days</strong> </p>
 
-                       
+
                     </div>
 
                     <!-- Content -->
@@ -724,7 +724,7 @@
                                 <span><strong>Exclusive Benefits </strong> Get 50% off annual membership after
                                     pre-launch + earn up to $3,000 via our Ambassador referral program.</span>
                             </li>
-                          
+
                         </ul>
                         <div class="mt-8 text-center">
                             <a href="./pre-launch.html"
@@ -760,7 +760,7 @@
                     person.</p>
             </div>
 
-            
+
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
 
@@ -774,7 +774,7 @@
                         </div>
                         <div
                             class="absolute top-4 left-4 bg-secondary text-white px-3 py-1 rounded-full text-sm font-bold">
-                         
+
                             September 25, 2025
                         </div>
                     </div>
@@ -865,7 +865,7 @@
                         </div>
                         <div
                             class="absolute top-4 left-4 bg-secondary text-white px-3 py-1 rounded-full text-sm font-bold">
-                            October 17, 2025 
+                            October 17, 2025
                         </div>
                     </div>
                     <div class="p-6">
@@ -885,11 +885,11 @@
                     </div>
                 </div>
 
-                
 
-               
 
-                
+
+
+
 
                 <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover transition duration-300">
                     <div class="relative event-card">
@@ -901,7 +901,7 @@
                         </div>
                         <div
                             class="absolute top-4 left-4 bg-secondary text-white px-3 py-1 rounded-full text-sm font-bold">
-                            October 30, 2025 
+                            October 30, 2025
                         </div>
                     </div>
                     <div class="p-6">
@@ -931,7 +931,7 @@
                         </div>
                         <div
                             class="absolute top-4 left-4 bg-secondary text-white px-3 py-1 rounded-full text-sm font-bold">
-                            November 10, 2025 
+                            November 10, 2025
                         </div>
                     </div>
                     <div class="p-6">
@@ -969,7 +969,7 @@
 
 
     <!-- App Download Section -->
-    <section class="py-16 bg-primary text-white">
+    <!-- <section class="py-16 bg-primary text-white">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-10 md:mb-0">
@@ -1003,7 +1003,6 @@
                     </div>
                 </div>
                 <div class="md:w-1/2 flex justify-center">
-                    <!-- App Mockup -->
                     <div class=" w-64 h-96 rounded-3xl overflow-hidden">
                         <div class="flex flex-col items-center justify-center h-full">
                             <img src="./assets/app.jpeg" alt="WBIZNEX APP">
@@ -1012,7 +1011,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-------- E N D   O F   D O W N L O A D S --------->
 
     <!-- Blog Section -->
@@ -1257,8 +1256,55 @@
     </footer>
 
 
+    <!-- Floating Alert Modal - NATIONAL MEMBERSHIP -->
+    <div id="prelaunch-modal-national" class="fixed inset-0 z-50 bg-black/50 flex items-center justify-center hidden">
+        <div class="bg-primary text-white rounded-xl shadow-2xl p-6 max-w-xl w-full relative mx-4">
+            <!-- Dismiss Button -->
+            <button onclick="closeNationalModal()"
+                class="absolute top-3 right-4 text-white text-xl hover:text-yellow-300 transition">
+                &times;
+            </button>
+
+            <!-- Content -->
+            <div class="text-center">
+                <h3 class="text-xl md:text-2xl font-bold mb-2">🚀 National Membership Launching Soon</h3>
+                <p class="text-sm md:text-base text-white/90 mb-4">
+                    Our National Membership is launching soon. Secure your spot with a 30-day Pre-Launch Membership,
+                    available now.
+                </p>
+                <a href="./pre-launch.html"
+                    class="bg-secondary hover:bg-blue-600 text-white text-sm font-semibold px-6 py-2 rounded-full transition duration-300 inline-block">
+                    Join Pre-Launch
+                </a>
+            </div>
+        </div>
+    </div>
 
 
+    <!-- Floating Alert Modal - INTERNATIONAL MEMBERSHIP -->
+    <div id="prelaunch-modal-international"
+        class="fixed inset-0 z-50 bg-black/50 flex items-center justify-center hidden">
+        <div class="bg-primary text-white rounded-xl shadow-2xl p-6 max-w-xl w-full relative mx-4">
+            <!-- Dismiss Button -->
+            <button onclick="closeInternationalModal()"
+                class="absolute top-3 right-4 text-white text-xl hover:text-yellow-300 transition">
+                &times;
+            </button>
+
+            <!-- Content -->
+            <div class="text-center">
+                <h3 class="text-xl md:text-2xl font-bold mb-2">🚀 International Membership Launching Soon</h3>
+                <p class="text-sm md:text-base text-white/90 mb-4">
+                    Our International Membership is launching soon. Secure your spot with a 30-day Pre-Launch
+                    Membership, available now.
+                </p>
+                <a href="./pre-launch.html"
+                    class="bg-secondary hover:bg-blue-600 text-white text-sm font-semibold px-6 py-2 rounded-full transition duration-300 inline-block">
+                    Join Pre-Launch
+                </a>
+            </div>
+        </div>
+    </div>
 
     <!------ S C R I P T S  -   D O   N O T    T O U C H ------>
     <script src="index.js"></script>
